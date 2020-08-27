@@ -1,0 +1,17 @@
+@import '../test-task.mixins';
+
+.data-table {
+  border-collapse: collapse;
+
+  &-row {
+    &:nth-of-type(odd) {
+      background: #eee;
+    }
+
+    &-cell {
+      @include mCell();
+    }
+
+  }
+
+}

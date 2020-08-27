@@ -1,0 +1,23 @@
+.cell-view {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+
+  &.cell-positive {
+    animation: fadeBgAnimate 5s normal forwards ease-in-out;
+    background-color: #8a8af5;
+  }
+
+  &.cell-negative {
+    animation: fadeBgAnimate 5s normal forwards ease-in-out;
+    background-color: #e76060;
+  }
+
+  @keyframes fadeBgAnimate {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+}
+
