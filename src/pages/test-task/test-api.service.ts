@@ -9,6 +9,9 @@ import { CONSTANTS } from '../../shared/constants';
  */
 export class TestApiService {
 
+    /**
+     * Emitter for WS server events
+     */
     public static get serverEvents$(): WebSocketSubject<TableItem> {
         return this._serverSubject$;
     };
@@ -16,7 +19,7 @@ export class TestApiService {
     private static _serverSubject$: WebSocketSubject<TableItem>;
 
     /**
-     * Schedules to create websocket connection
+     * Initiate websocket connection to server
      */
     public static connect(onConnected: Function): void {
         this._serverSubject$ = webSocket({
